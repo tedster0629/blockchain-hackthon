@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buyer</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="../app.js"></script>
+</head>
+<body>
+  
+  <h2>Rakuten Buyer Blockchain Platform</h2>
+  <!-- <h3>You have <span class="black"><span id="balance"></span> META</span></h3> -->
+  <br> <label for="contractAddress">Contract Address: </label>
+  <input type="text" id="contractAddress" />
+  <br>
+  <br>
+  <button id="createContract" onclick="App.createbuyerContract()"> Create Seller Contract </button>
+  <br>
+  <br><label for="buyerContractAddress">Contract Address:</label><input type="text" id="buyerContractAddress" placeholder=" contract Address"></input>
+  <br>  <br>
+  <h1>Buy Product </h1>
+  
+  <br><label for="productName">Product Name:</label><input type="text" id="productName" placeholder=" apple iphone X"></input>
+  <br><label for="quantity">Quantity :</label><input type="number"  id="quantity" />
+
+  <br><br><button id="register" onclick="App.BuyProduct()">Buy Product</button>
+  <br>
+ 
+
+  <br><label for="productId">Product Id :</label><input type="number"  id="productId" />
+  
+  <br><br><input  type="text" id="count" placeholder=" show count" />
+
+  <br><br><button id="getProduct" onclick="App.getBuyerProduct()">Get Product Name</button>
+  <br><br><button id="getBroughtProductCount" onclick="App.getbroughtProductCount()">Get BroughtProduct Count</button>
+
+   
+  <br>
+  <h2>Shipped</h2>
+  
+  <br><br><button id="sell" onclick="App.shipProduct()">Ship Product</button>
+  <br>
+  <h2>Deliver</h2>
+  
+  <br><br><button id="deliver" onclick="App.DeliverProduct()">Got Product</button>
+
+  
+  <br><br>
+</body>
+</html>

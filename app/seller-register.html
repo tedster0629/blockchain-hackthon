@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Seller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="../app.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <h2>Rakuten Seller Blockchain Platform</h2>
+    <!-- create contract block -->
+    <div class="row">
+      <div class="card col-lg-5">
+        <h2>Create Contract </h2>
+        <p>
+          <span  id="contractAddress" />
+        </p>
+        <p>
+          <label for="sellerContractAddress">Contract Address:</label>
+          <input type="text" class="form-control" id="sellerContractAddress" placeholder="created contract Address"></input>
+        </p>
+        <p>
+          <button id="createContract" class="btn btn-sm btn-success" onclick="App.createSellerContract()" role="button"> Create Contract </button>
+        </p>
+      </div>
+
+      <!-- end block -->
+
+      <div class="card col-lg-5">
+
+        <h2>Create Product </h2>
+
+        <p>
+          <label for="productName"> Name:</label>
+          <input type="text" class="form-control" id="productName" placeholder=" apple iphone X"></input>
+        </p>
+        <p>
+          <label for="quantity">Quantity :</label>
+          <input class="form-control" type="number" id="quantity" placeholder="10" />
+
+        </p>
+        <p>
+          <button id="register" class="btn btn-sm btn-success" onclick="App.registerProduct()">Register Product</button>
+        </p>
+        <p id="register_product_info"> </p>
+      </div>
+    </div>
+    
+   
+    <div class="row">
+      <div class="card col-lg-5">
+        <h2>Sell</h2>
+        <p>
+            <label for="productId">Product Id :</label>
+            <input type="number" id="productId" class="form-control productId" />
+         
+          <button id="sell" class="form-control btn-success productId" onclick="App.sellProduct()">Sell Product</button>
+        </p>
+        <p id="sell_product_info"></p>
+
+      </div>
+      <div class="card col-lg-5">
+        <h2>Deliver</h2>
+        <p>
+            <label for="productId">Product Id :</label>
+            <input type="number" id="productId" class="form-control productId" />
+         
+          <button id="deliver" class="form-control btn-success productId" onclick="App.deliverProduct()">Deliver Product</button>
+        </p>
+        <p id="deliver_product_info"></p>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="card col-lg-5">
+          <p>
+            <label for="productId">Product Id :</label>
+            <input type="number" id="productId" class="form-control productId" />
+          
+            <button id="getProduct" class="form-control btn-success productId" onclick="App.getSellerProduct()">Product Name</button>
+          </p>
+          <p>
+              <label  type="text" id="productName" class="productId" />
+            </p>
+            <p id="get_seller_product_info"></p>
+        </div>
+        
+        <div class="card col-lg-5">
+          <p>
+            <button id="getRegProductCount" class="form-control btn-success" onclick="App.getRegProductCount()">Get RegProductCount Count</button>
+          </p>
+          <p id="get_registerd_products_info"></p>
+        </div>
+      </div>
+
+  </div>
+</body>
+
+</html>
